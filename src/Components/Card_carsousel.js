@@ -1,6 +1,7 @@
 import React, { Component } from "react";
 import ReactDOM from "react-dom";
 import ReactCardCarousel from "react-card-carousel";
+import Grid from "@material-ui/core/Grid";
 
 class MyCarousel extends Component {
   static get CONTAINER_STYLE() {
@@ -12,19 +13,19 @@ class MyCarousel extends Component {
       flex: 1,
       justifyContent: "center",
       alignItems: "middle",
-      marginBottom:"0rem"
+      marginBottom: "0rem"
     };
   }
 
   static get CARD_STYLE() {
     return {
-      height: "400px",
-      width: "800px",
+      height: "50vh",
+      width: "50vw",
       paddingTop: "80px",
       textAlign: "center",
       background: "#5e72eb",
       color: "#FFF",
-      fontSize:"45px",
+      fontSize: "35px",
       fontFamily: "sans-serif",
       textTransform: "uppercase",
       borderRadius: "10px",
@@ -34,13 +35,19 @@ class MyCarousel extends Component {
 
   render() {
     return (
-      <div style={MyCarousel.CONTAINER_STYLE}>
-        <ReactCardCarousel autoplay={true} autoplay_speed={2500}>
-          <div style={MyCarousel.CARD_STYLE}>WELCOME TO OSTELLO BLOG</div>
-          <div style={MyCarousel.CARD_STYLE}>Check out all the awesome blogs</div>
-          <div style={MyCarousel.CARD_STYLE}>HELLO</div>
-        </ReactCardCarousel>
-      </div>
+      <>
+        {/* <Grid item s={3}></Grid> */}
+        {/* <Grid item s={2}> */}
+          <div style={MyCarousel.CONTAINER_STYLE}>
+            <ReactCardCarousel autoplay={true} autoplay_speed={2500}>
+              <div style={MyCarousel.CARD_STYLE}>OSTELLO</div>
+              <div style={MyCarousel.CARD_STYLE}>BLOGS</div>
+              <div style={MyCarousel.CARD_STYLE}>HELLO</div>
+            </ReactCardCarousel>
+          </div>
+        {/* </Grid> */}
+        {/* <Grid item s={3}></Grid> */}
+      </>
     );
   }
 }
