@@ -7,6 +7,7 @@ import CloudUploadIcon from "@material-ui/icons/CloudUpload";
 import Button from "@material-ui/core/Button";
 import ArrowDownwardIcon from '@material-ui/icons/ArrowDownward';
 
+
 const useStyles = makeStyles((theme) => ({
   root: {
     flexGrow: 1,
@@ -69,13 +70,12 @@ export default function CenteredGrid() {
         </Grid>
         <Grid item xs={3}>
           <Button
-            style={{marginTop:"8px", width:"173px", height:"55px", color:"#5e72eb"}}
+            style={{marginTop:"10px", width:"73px", height:"45px", color:"#5e72eb"}}
             variant="contained"
             size="large"
             className={classes.button}
             startIcon={<CloudUploadIcon />}
           >
-            Upload
           </Button>
         </Grid>
         <Grid item xs={3}></Grid>
