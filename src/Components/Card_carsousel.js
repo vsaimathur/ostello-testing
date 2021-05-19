@@ -1,15 +1,14 @@
 import React, { Component } from "react";
 import ReactDOM from "react-dom";
 import ReactCardCarousel from "react-card-carousel";
-import Grid from "@material-ui/core/Grid";
 
 class MyCarousel extends Component {
   static get CONTAINER_STYLE() {
     return {
       position: "relative",
-      height: "100vh",
+      height: "60vh",
       width: "100%",
-      display: "flex",
+      display: "wrap",
       flex: 1,
       justifyContent: "center",
       alignItems: "middle",

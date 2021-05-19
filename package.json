@@ -2,9 +2,9 @@
   "name": "material-blog",
   "version": "1.1.0",
   "private": true,
-  "engines" : {
-    "node" : "14.17.0",
-    "npm" : "6.14.13"
+  "engines": {
+    "node": "14.17.0",
+    "npm": "6.14.13"
   },
   "dependencies": {
     "@fortawesome/fontawesome-svg-core": "^1.2.30",

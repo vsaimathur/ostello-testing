@@ -244,7 +244,7 @@ export default function MediumCard(props) {
             }}
             showLabels
             className={classes.root}
-            style={{marginLeft:"14px",Color:"#5e72eb" , fontSize: "24px"}}
+            style={{marginLeft:"2px",Color:"#5e72eb" , fontSize: "24px"}}
           >
             <BottomNavigationAction label="view" icon={<VisibilitySharp />} />
             <BottomNavigationAction label="Like" icon={<FavoriteIcon />} />
