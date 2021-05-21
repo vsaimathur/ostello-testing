@@ -44,7 +44,7 @@ class Slider extends Component {
   render() {
     const { itemRows } = this.state;
     return (
-      <div>
+      <div style={{backgroundColor:"#f0eca3"}}>
         <MYCarousel/>
         <Grid container spacing={1}>
           {itemRows.map((row, id) =>

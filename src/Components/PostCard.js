@@ -1,13 +1,12 @@
 import React from "react";
 import ShortenText from "../utils/ShortenText";
 import ToText from "../utils/ToText";
-import VisibilitySharp from "@material-ui/icons/Visibility";
+import QuestionAnswerIcon from '@material-ui/icons/QuestionAnswer';
 import FavoriteIcon from "@material-ui/icons/Favorite";
-import ShareSharpIcon from "@material-ui/icons/ShareSharp";
+import ScreenShareIcon from '@material-ui/icons/ScreenShare';
 import BottomNavigation from '@material-ui/core/BottomNavigation';
 import BottomNavigationAction from '@material-ui/core/BottomNavigationAction';
-import { faUser } from "@fortawesome/free-solid-svg-icons";
-import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+
 import {
   makeStyles,
   Avatar,
@@ -23,20 +22,21 @@ import {
   Divider,
 } from "@material-ui/core";
 
+
 const styles = makeStyles((muiBaseTheme) => ({
   grid: {
     marginTop: "45px",
     minHeight: "391px",
   },
   card: {
-    minWidth: 0,
-    marginLeft: "15px",
-    marginRight: "15px",
+    minWidth: "12px",
+    marginLeft: "38px",
+    marginRight: "42px",
     margin: "auto",
     transition: "0.3s",
-    minHeight: "391px",
+    minHeight: "381px",
     borderRadius: ".625rem!important",
-    boxShadow: "0 8px 40px -12px rgba(0,0,0,0.3)",
+    boxShadow: "0 8px 40px -12px rgba(0,0,0,0.8)",
     "&:hover": {
       boxShadow: "0 16px 70px -12.125px rgba(0,0,0,0.3)",
     },
@@ -50,7 +50,7 @@ const styles = makeStyles((muiBaseTheme) => ({
     padding: muiBaseTheme.spacing(3),
   },
   divider: {
-    margin: `${muiBaseTheme.spacing(2)}px 0`,
+    margin: `${muiBaseTheme.spacing(1)}px 0`,
   },
   heading: {
     fontFamily: "sans-serif",
@@ -77,6 +77,8 @@ const styles = makeStyles((muiBaseTheme) => ({
     },
   },
 }));
+
+
 
 const StyledBadge = withStyles((theme) => ({
   badge: {
@@ -138,6 +140,7 @@ export default function MediumCard(props) {
     splitMonth[0];
   const d = new Date();
   const [value, setValue] = React.useState(0);
+
 
   return (
     <Grid xs={12} sm={12} lg={4} className={classes.grid}>
@@ -211,7 +214,7 @@ export default function MediumCard(props) {
           style={{ paddingLeft: "1.5625rem", paddingRight: "1.5625rem" }}
         >
           <Grid>
-            <Typography
+            {/* <Typography
               style={{
                 fontSize: "14px",
                 color: "#212529",
@@ -221,10 +224,10 @@ export default function MediumCard(props) {
               gutterBottom
             >
               <FontAwesomeIcon icon={faUser} /> {props.author}
-            </Typography>
+            </Typography> */}
           </Grid>
-          {/* <Grid>
-            <Typography
+          <Grid>
+            {/* <Typography
               display="block"
               variant="body1"
               style={{
@@ -235,8 +238,8 @@ export default function MediumCard(props) {
               gutterBottom
             >
               <FontAwesomeIcon icon={faCalendarAlt} /> {finalDate}
-            </Typography>
-          </Grid> */}
+            </Typography> */}
+          </Grid> 
           <BottomNavigation
             value={value}
             onChange={(event, newValue) => {
@@ -244,11 +247,11 @@ export default function MediumCard(props) {
             }}
             showLabels
             className={classes.root}
-            style={{marginLeft:"2px",Color:"#5e72eb" , fontSize: "24px"}}
+            style={{marginLeft:"10px",Color:"#5e72eb" , fontSize: "24px"}}
           >
-            <BottomNavigationAction label="view" icon={<VisibilitySharp />} />
-            <BottomNavigationAction label="Like" icon={<FavoriteIcon />} />
-            <BottomNavigationAction label="share" icon={<ShareSharpIcon />} />
+            <BottomNavigationAction label="Comment" icon={<QuestionAnswerIcon />}  />
+            <BottomNavigationAction label="Like" icon={<FavoriteIcon/>} style={{left:"10px"}}/>
+            <BottomNavigationAction label="share" icon={<ScreenShareIcon />}style={{left:"15px"}}/>
           </BottomNavigation>
         </CardActions>
       </Card>

@@ -2,11 +2,12 @@ import React, { Component } from "react";
 import ReactDOM from "react-dom";
 import ReactCardCarousel from "react-card-carousel";
 
+
 class MyCarousel extends Component {
   static get CONTAINER_STYLE() {
     return {
       position: "relative",
-      height: "60vh",
+      height: "62vh",
       width: "100%",
       display: "wrap",
       flex: 1,
@@ -20,7 +21,7 @@ class MyCarousel extends Component {
     return {
       height: "50vh",
       width: "50vw",
-      paddingTop: "80px",
+      paddingTop: "120px",
       textAlign: "center",
       background: "#5e72eb",
       color: "#FFF",
@@ -35,17 +36,13 @@ class MyCarousel extends Component {
   render() {
     return (
       <>
-        {/* <Grid item s={3}></Grid> */}
-        {/* <Grid item s={2}> */}
           <div style={MyCarousel.CONTAINER_STYLE}>
-            <ReactCardCarousel autoplay={true} autoplay_speed={2500}>
+            <ReactCardCarousel autoplay={true} autoplay_speed={3200}>
+              <div style={MyCarousel.CARD_STYLE}>WELCOME</div>
               <div style={MyCarousel.CARD_STYLE}>OSTELLO</div>
-              <div style={MyCarousel.CARD_STYLE}>BLOGS</div>
-              <div style={MyCarousel.CARD_STYLE}>HELLO</div>
+              <div style={MyCarousel.CARD_STYLE}>BlOGS</div>
             </ReactCardCarousel>
           </div>
-        {/* </Grid> */}
-        {/* <Grid item s={3}></Grid> */}
       </>
     );
   }
