@@ -5,7 +5,15 @@ import Slider from "./Components/Slider";
 import "./App.css";
 
 function App() {
+<<<<<<< HEAD
   return   <Slider/>
+=======
+  return (
+    <>
+      <Slider />
+    </>
+  )
+>>>>>>> 64347fec1cf59abfd7e754ee94fb1e8d0a85e4cd
 }
 
 export default App;
